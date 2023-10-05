@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="汇编语言为不同高级语言的不同编译器提供了通用的输出语句  (但是更深层地去看的话，汇编语言的种类也和指令集有关系)  i(预处理),.s(编译后的汇编语言表示)文件都是文本文件 内存是一个临时存储设备，这个临时指的是处理器执行程序时 控制器和适配器的区别  封装方式不同: 控制器:IO设备本身或者系统主板上的芯片组 适配器:插在主板插槽上的卡 相同点：都是在IO总线和IO设备间传递信息 高速缓存">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://github.com/Iloveshe/Iloveshe.github.io/2023/10/05/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E9%98%85%E8%AF%BB%E5%B0%8F%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="汇编语言为不同高级语言的不同编译器提供了通用的输出语句  (但是更深层地去看的话，汇编语言的种类也和指令集有关系)  i(预处理),.s(编译后的汇编语言表示)文件都是文本文件 内存是一个临时存储设备，这个临时指的是处理器执行程序时 控制器和适配器的区别  封装方式不同: 控制器:IO设备本身或者系统主板上的芯片组 适配器:插在主板插槽上的卡 相同点：都是在IO总线和IO设备间传递信息 高速缓存">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-10-05T03:33:28.783Z">
+<meta property="article:modified_time" content="2023-10-05T03:29:48.122Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/Iloveshe/Iloveshe.github.io/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/Iloveshe/Iloveshe.github.io/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/Iloveshe/Iloveshe.github.io/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/Iloveshe/Iloveshe.github.io/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/Iloveshe/Iloveshe.github.io/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/Iloveshe/Iloveshe.github.io/">Home</a>
+        
+          <a class="main-nav-link" href="/Iloveshe/Iloveshe.github.io/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/Iloveshe/Iloveshe.github.io/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://github.com/Iloveshe/Iloveshe.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-深入理解计算机系统阅读小记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/Iloveshe/Iloveshe.github.io/2023/10/05/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E9%98%85%E8%AF%BB%E5%B0%8F%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2023-10-05T03:33:28.783Z" itemprop="datePublished">2023-10-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><h1 id="汇编语言为不同高级语言的不同编译器提供了通用的输出语句"><a href="#汇编语言为不同高级语言的不同编译器提供了通用的输出语句" class="headerlink" title="汇编语言为不同高级语言的不同编译器提供了通用的输出语句"></a>汇编语言为不同高级语言的不同编译器提供了通用的输出语句</h1></li>
+</ol>
+<p>(但是更深层地去看的话，汇编语言的种类也和指令集有关系)</p>
+<ol>
+<li><h1 id="i-预处理-s-编译后的汇编语言表示-文件都是文本文件"><a href="#i-预处理-s-编译后的汇编语言表示-文件都是文本文件" class="headerlink" title="i(预处理),.s(编译后的汇编语言表示)文件都是文本文件"></a>i(预处理),.s(编译后的汇编语言表示)文件都是文本文件</h1></li>
+<li><h1 id="内存是一个临时存储设备，这个临时指的是处理器执行程序时"><a href="#内存是一个临时存储设备，这个临时指的是处理器执行程序时" class="headerlink" title="内存是一个临时存储设备，这个临时指的是处理器执行程序时"></a>内存是一个临时存储设备，这个临时指的是处理器执行程序时</h1></li>
+<li><h1 id="控制器和适配器的区别"><a href="#控制器和适配器的区别" class="headerlink" title="控制器和适配器的区别"></a>控制器和适配器的区别</h1></li>
+</ol>
+<p>封装方式不同:</p>
+<p>控制器:IO设备本身或者系统主板上的芯片组</p>
+<p>适配器:插在主板插槽上的卡</p>
+<h2 id="相同点：都是在IO总线和IO设备间传递信息"><a href="#相同点：都是在IO总线和IO设备间传递信息" class="headerlink" title="相同点：都是在IO总线和IO设备间传递信息"></a>相同点：都是在IO总线和IO设备间传递信息</h2><ol>
+<li><h1 id="高速缓存至关重要-系统花费大量时间把信息从一个地方挪到另一个地方"><a href="#高速缓存至关重要-系统花费大量时间把信息从一个地方挪到另一个地方" class="headerlink" title="高速缓存至关重要:系统花费大量时间把信息从一个地方挪到另一个地方"></a>高速缓存至关重要:系统花费大量时间把信息从一个地方挪到另一个地方</h1></li>
+<li><h2 id="利用局部性原理，在处理器-寄存器-和主存之间加入一系列的cache-造价始终速度接近寄存器"><a href="#利用局部性原理，在处理器-寄存器-和主存之间加入一系列的cache-造价始终速度接近寄存器" class="headerlink" title="利用局部性原理，在处理器(寄存器)和主存之间加入一系列的cache(造价始终速度接近寄存器)"></a>利用局部性原理，在处理器(寄存器)和主存之间加入一系列的cache(造价始终速度接近寄存器)</h2></li>
+<li><h1 id="存储设备等级，在某些具有分布式文件系统的网络系统中，本地磁盘就是存储在其他系统中磁盘的高速缓存"><a href="#存储设备等级，在某些具有分布式文件系统的网络系统中，本地磁盘就是存储在其他系统中磁盘的高速缓存" class="headerlink" title="存储设备等级，在某些具有分布式文件系统的网络系统中，本地磁盘就是存储在其他系统中磁盘的高速缓存"></a>存储设备等级，在某些具有分布式文件系统的网络系统中，本地磁盘就是存储在其他系统中磁盘的高速缓存</h1></li>
+<li><h1 id="操作系统的两个基本功能"><a href="#操作系统的两个基本功能" class="headerlink" title="操作系统的两个基本功能"></a>操作系统的两个基本功能</h1></li>
+<li><h2 id="防止硬件被失控的应用程序滥用"><a href="#防止硬件被失控的应用程序滥用" class="headerlink" title="防止硬件被失控的应用程序滥用"></a>防止硬件被失控的应用程序滥用</h2></li>
+</ol>
+<p>e.g. 安卓系统的应用老是试图读定位，if没有os，会比现在更猖狂</p>
+<ol>
+<li><h2 id="向应用程序提供简单一致的机制来控制复杂而通常又大不相同的低级硬件设备"><a href="#向应用程序提供简单一致的机制来控制复杂而通常又大不相同的低级硬件设备" class="headerlink" title="向应用程序提供简单一致的机制来控制复杂而通常又大不相同的低级硬件设备"></a>向应用程序提供简单一致的机制来控制复杂而通常又大不相同的低级硬件设备</h2></li>
+<li><h2 id="如何实现-通过几个基本的抽象概念来实现这两个功能"><a href="#如何实现-通过几个基本的抽象概念来实现这两个功能" class="headerlink" title="如何实现:通过几个基本的抽象概念来实现这两个功能"></a>如何实现:通过几个基本的抽象概念来实现这两个功能</h2></li>
+<li><h3 id="文件：是对IO设备的抽象表示"><a href="#文件：是对IO设备的抽象表示" class="headerlink" title="文件：是对IO设备的抽象表示"></a>文件：是对IO设备的抽象表示</h3></li>
+<li><h3 id="虚拟内存-是对主存和磁盘IO设备的抽象表示"><a href="#虚拟内存-是对主存和磁盘IO设备的抽象表示" class="headerlink" title="虚拟内存:是对主存和磁盘IO设备的抽象表示"></a>虚拟内存:是对主存和磁盘IO设备的抽象表示</h3></li>
+<li><h3 id="进程-是对处理器、主存和IO设备的抽象表示"><a href="#进程-是对处理器、主存和IO设备的抽象表示" class="headerlink" title="进程:是对处理器、主存和IO设备的抽象表示"></a>进程:是对处理器、主存和IO设备的抽象表示</h3></li>
+<li><h4 id="os对一个正在运行的程序的一种抽象"><a href="#os对一个正在运行的程序的一种抽象" class="headerlink" title="os对一个正在运行的程序的一种抽象"></a>os对一个正在运行的程序的一种抽象</h4><p> hello这样的程序在现代os上运行时，os会提供一种假象，就好像系统上只有这个程序在运行。程序看上去是独占地使用处理器、主存和IO设备。处理器看上去就是在不间断地一条一条地执行程序中的指令，也就是说看起来该程序的代码和数据是系统内存中的唯一对象。这个假象是通过进程(os对一个正在运行的程序的抽象)这一概念实现的。</p>
+</li>
+<li><h1 id="逻辑运算和位运算的不同"><a href="#逻辑运算和位运算的不同" class="headerlink" title="逻辑运算和位运算的不同"></a>逻辑运算和位运算的不同</h1></li>
+<li><h2 id="逻辑运算认为所有非零的参数都表示成TRUE，但是位运算只有在为1时才为真"><a href="#逻辑运算认为所有非零的参数都表示成TRUE，但是位运算只有在为1时才为真" class="headerlink" title="逻辑运算认为所有非零的参数都表示成TRUE，但是位运算只有在为1时才为真"></a>逻辑运算认为所有非零的参数都表示成TRUE，但是位运算只有在为1时才为真</h2></li>
+<li><h2 id="逻辑运算符-和-与它们对应的位运算符-和-的第二个重要的区别就是，如果对第一个参数求值就能确定表达式的结果，那么逻辑运算不会继续对第二个数求值-短路特性"><a href="#逻辑运算符-和-与它们对应的位运算符-和-的第二个重要的区别就是，如果对第一个参数求值就能确定表达式的结果，那么逻辑运算不会继续对第二个数求值-短路特性" class="headerlink" title="逻辑运算符&amp;&amp;和||与它们对应的位运算符&amp;和|的第二个重要的区别就是，如果对第一个参数求值就能确定表达式的结果，那么逻辑运算不会继续对第二个数求值(短路特性)"></a>逻辑运算符&amp;&amp;和||与它们对应的位运算符&amp;和|的第二个重要的区别就是，如果对第一个参数求值就能确定表达式的结果，那么逻辑运算不会继续对第二个数求值(短路特性)</h2><p> so,a&amp;&amp;5&#x2F;a不会造成被零除  p&amp;&amp;<em>p++也不会导致间接引用空指针(p是指针，</em>解引用)</p>
+</li>
+<li><h1 id="逻辑右移和算术右移"><a href="#逻辑右移和算术右移" class="headerlink" title="逻辑右移和算术右移"></a>逻辑右移和算术右移</h1></li>
+</ol>
+<p>算术右移要高位直接补1(适合有符号数) 对于无符号数，右移必须是逻辑的</p>
+<ol>
+<li><h1 id="无符号编码具有唯一性"><a href="#无符号编码具有唯一性" class="headerlink" title="无符号编码具有唯一性"></a>无符号编码具有唯一性</h1></li>
+</ol>
+<p>是一个双射  补码编码也具有唯一性</p>
+<ol>
+<li><h1 id="补码编码的另一种转成二进制的方法"><a href="#补码编码的另一种转成二进制的方法" class="headerlink" title="补码编码的另一种转成二进制的方法"></a>补码编码的另一种转成二进制的方法</h1></li>
+</ol>
+<p>比如1111 &#x3D; -1<em>2^3+1</em>2^2+1<em>2^1+1</em>2^0&#x3D;-1</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/Iloveshe/Iloveshe.github.io/2023/10/05/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E9%98%85%E8%AF%BB%E5%B0%8F%E8%AE%B0/" data-id="clncmhnhl0001bkg82nvg8jul" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/Iloveshe/Iloveshe.github.io/2023/10/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/Iloveshe/Iloveshe.github.io/archives/2023/10/">October 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/Iloveshe/Iloveshe.github.io/2023/10/05/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E9%98%85%E8%AF%BB%E5%B0%8F%E8%AE%B0/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/Iloveshe/Iloveshe.github.io/2023/10/05/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/Iloveshe/Iloveshe.github.io/" class="mobile-nav-link">Home</a>
+  
+    <a href="/Iloveshe/Iloveshe.github.io/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/Iloveshe/Iloveshe.github.io/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/Iloveshe/Iloveshe.github.io/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/Iloveshe/Iloveshe.github.io/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
